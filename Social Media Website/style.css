@@ -244,16 +244,41 @@ main .container .left {
   position: absolute;
   top: 0;
   left: 110%;
+  width: 30rem;
   background-color: var(--color-white);
   border-radius: 1rem;
   box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60%, 25%);
   z-index: 8;
+  padding: 1rem 2rem;
 }
 
 .left .notification-popup::before {
   content: "";
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   display: block;
   background-color: var(--color-white);
+  position: absolute;
+  left: -0.6rem;
+  top: 1.5rem;
+  transform: rotate(45deg);
+}
+
+/* .left .notification-popup .notification-item {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+} */
+
+.left .notification-popup .notification-item {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left .notification-popup small {
+  display: block;
 }
