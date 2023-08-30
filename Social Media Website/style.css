@@ -250,6 +250,7 @@ main .container .left {
   box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60%, 25%);
   z-index: 8;
   padding: 1rem 2rem;
+  display: none;
 }
 
 .left .notification-popup::before {
@@ -281,4 +282,155 @@ main .container .left {
 
 .left .notification-popup small {
   display: block;
+}
+
+/* =========Middle======== */
+.middle .stories {
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  gap: 0.5rem;
+}
+
+.middle .stories .story {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.middle .stories .story:nth-child(1) {
+  background: url("./Images/1.png") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(2) {
+  background: url("./Images/1.png") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(3) {
+  background: url("./Images/1.png") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(4) {
+  background: url("./Images/1.png") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(5) {
+  background: url("./Images/1.png") no-repeat center center/cover;
+}
+
+.middle .stories .story::before {
+  content: "";
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  position: absolute;
+  bottom: 0;
+}
+
+.middle .stories .story .name {
+  z-index: 2;
+}
+
+.middle .stories .story .profile {
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: start;
+  border: 2px solid var(--color-primary);
+  position: relative;
+  left: -1.5rem;
+  top: -0.7rem;
+}
+
+.middle .create-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background-color: var(--color-white);
+  padding: 0.4rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"] {
+  width: 100%;
+  padding-left: 1rem;
+  background-color: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+/*=========== NewsFeeds ===========*/
+.middle .feeds .feed {
+  width: 80%;
+  margin: 1rem auto;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 1rem;
+  /* margin: 1rem 0; */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.feeds .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feeds .feed .head .info {
+  display: flex;
+  gap: 1rem;
+}
+
+.feeds .feed .head .info small {
+  display: block;
+  color: var(--color-gray);
+}
+
+.feeds .feed .photo {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.feeds .feed .action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  margin: 0.6rem 0;
+}
+
+.feeds .feed .liked {
+  display: flex;
+}
+
+.feeds .feed .liked span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  margin-left: -0.6rem;
+}
+
+.feeds .feed .liked span:first-child {
+  margin: 0;
+}
+
+.feeds .feed .liked p {
+  margin-left: 0.3rem;
+}
+
+.feeds .feed .action-btn .heart {
+  font-size: 1.7rem;
 }
