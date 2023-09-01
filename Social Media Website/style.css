@@ -14,6 +14,9 @@
   --border-radius: 2rem;
   --search-padding: 0.6rem 1rem;
   --card-padding: 1rem;
+
+  --stickty-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
 }
 
 *,
@@ -112,14 +115,14 @@ nav .container {
   /* gap: 1rem; */
 }
 
-nav .search {
+.search {
   display: flex;
   background-color: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
 }
 
-nav .search input[type="search"] {
+.search input[type="search"] {
   background-color: transparent;
   /*width: 30%; */
   margin-left: 1rem;
@@ -374,7 +377,6 @@ main .container .left {
 
 /*=========== NewsFeeds ===========*/
 .middle .feeds .feed {
-  width: 80%;
   margin: 1rem auto;
   background-color: var(--color-white);
   padding: 1rem;
@@ -437,4 +439,67 @@ main .container .left {
 
 .feeds .feed .action-btn .heart {
   font-size: 1.7rem;
+}
+
+/* Right Section */
+
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: 1rem;
+}
+
+.right .messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages i {
+  font-size: 1.2rem;
+}
+
+.right .messages .search {
+  margin-bottom: 1rem;
+}
+
+.right .messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right .messages .category .active {
+  border-color: var(--color-primary);
+}
+
+.right .messages .message {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.right .messages .message:last-child {
+  margin: 0;
+}
+
+.right .messages .message p {
+  font-size: 0.8rem;
 }
