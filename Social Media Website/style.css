@@ -91,6 +91,10 @@ img {
   color: var(--color-gray);
 }
 
+.hash-tag {
+  color: var(--color-primary);
+}
+
 /* NavBar */
 nav {
   width: 100%;
