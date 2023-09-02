@@ -155,7 +155,8 @@ main .container {
 main .container .left {
   height: max-content;
   position: sticky;
-  top: 5.4rem;
+  top: var(--stickty-top-left);
+  bottom: 0;
 }
 
 .profile-section {
@@ -167,6 +168,7 @@ main .container .left {
   align-items: center;
   width: 100%;
   column-gap: 1rem;
+  font-size: 0.9rem;
 }
 
 .left .sidebar {
@@ -209,7 +211,7 @@ main .container .left {
 
 .left .sidebar h3 {
   margin-left: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .left .sidebar .active {
@@ -313,20 +315,24 @@ main .container .left {
   overflow: hidden;
 }
 
+.middle .stories .story p {
+  text-align: center;
+}
+
 .middle .stories .story:nth-child(1) {
-  background: url("./Images/1.png") no-repeat center center/cover;
+  background: url("./Images/mystory.png") no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(2) {
-  background: url("./Images/1.png") no-repeat center center/cover;
+  background: url("./Images/zayn.jpg") no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(3) {
-  background: url("./Images/1.png") no-repeat center center/cover;
+  background: url("./Images/lilpump.jpg") no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(4) {
-  background: url("./Images/1.png") no-repeat center center/cover;
+  background: url("./Images/younglama.jpg") no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(5) {
