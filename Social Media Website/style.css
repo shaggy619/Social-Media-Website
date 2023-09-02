@@ -480,9 +480,9 @@ main .container .right {
 .right .messages .category h6 {
   width: 100%;
   text-align: center;
-  border-bottom: 4px solid var(--color-light);
+  border-bottom: 2px solid var(--color-light);
   padding-bottom: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .right .messages .category .active {
@@ -496,10 +496,66 @@ main .container .right {
   align-items: start;
 }
 
+.right .messages .message .profile {
+  position: relative;
+  overflow: visible;
+}
+
+.right .messages .message .profile img {
+  border-radius: 50%;
+}
+
+.right .messages .requests {
+  color: var(--color-primary);
+}
+
+.right .messages .message .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--color-success);
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid white;
+  bottom: 0;
+  right: 0;
+}
+
 .right .messages .message:last-child {
   margin: 0;
 }
 
 .right .messages .message p {
   font-size: 0.8rem;
+}
+
+.right .friend-request .request {
+  padding: var(--card-padding);
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+.right .friend-request p {
+  font-size: 0.8rem;
+}
+
+.right .friend-request .info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right .friend-request .action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right .friend-request .action .btn {
+  /* font-size: 0.8rem; */
+}
+
+.right .friend-request h4 {
+  margin: 1rem;
+  color: var(--color-gray);
+  font-size: 0.9rem;
 }
