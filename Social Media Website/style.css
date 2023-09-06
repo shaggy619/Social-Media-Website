@@ -533,6 +533,18 @@ main .container .right {
   right: 0;
 }
 
+.right .messages .msg-icons {
+  cursor: pointer;
+}
+
+.uil-edit:hover {
+  color: var(--color-primary);
+}
+
+.msg-close:hover {
+  color: red;
+}
+
 .right .messages .message:last-child {
   margin: 0;
 }
