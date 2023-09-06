@@ -581,6 +581,7 @@ main .container .right {
   display: grid;
   place-items: center;
   font-size: 0.9rem;
+  display: none;
 }
 
 .theme .card {
@@ -664,4 +665,109 @@ main .container .right {
 
 .theme .choose-color span:nth-child(5) {
   background-color: hsl(202, 75%, 60%);
+}
+
+.theme .choose-color span.active {
+  border: 5px solid white;
+}
+
+.theme .background {
+  margin-top: 2rem;
+}
+
+.theme .choose-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.theme .choose-bg > div {
+  padding: var(--card-padding);
+  width: 100%;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme .choose-bg > div.active {
+  border: 2px solid var(--color-primary);
+  box-shadow: 4px 0 20px 0px rgba(0, 0, 255, 0.235);
+}
+
+.theme .background .bg-1 {
+  background-color: white;
+  color: black;
+}
+
+.theme .background .bg-2 {
+  color: white;
+  background-color: hsl(252, 30%, 17%);
+}
+
+.theme .background .bg-3 {
+  color: white;
+  background-color: hsl(252, 30%, 10%);
+}
+
+.theme .choose-bg > div span {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--color-gray);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* ===============Responsive Design=========== */
+
+/* For Small Laptops and Big Tablets */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+
+  main .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+
+  .left {
+    width: 5rem;
+    z-index: 5;
+  }
+
+  .profile-section {
+    display: none;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .left .btn {
+    display: none;
+  }
+}
+
+/* For small tablets and mobile phones */
+@media screen and (max-width: 992px) {
+  nav .search {
+    display: none;
+  }
+
+  main .container {
+    grid-template-columns: 5rem auto 0;
+  }
+
+  main .container .right {
+    display: none;
+  }
+
+  .left .notification-popup {
+    width: 20rem;
+    font-size: 0.8rem;
+  }
 }
