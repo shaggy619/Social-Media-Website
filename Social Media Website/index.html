@@ -11,6 +11,7 @@
       href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -57,10 +58,14 @@
               <i class="uil uil-home"></i>
               <h3>Home</h3>
             </a>
-            <a href="#" class="menu-item">
-              <i class="uil uil-compass"></i>
-              <h3>Explore</h3>
+
+            <a href="#" class="menu-item" id="messages-notifications">
+              <i class="uil uil-envelope">
+                <small class="notification-count">6</small>
+              </i>
+              <h3>Messages</h3>
             </a>
+
             <a href="#" class="menu-item" id="notifications">
               <i class="uil uil-bell">
                 <small class="notification-count">9+</small>
@@ -160,12 +165,13 @@
             </a>
             <!-- End of Notification Section -->
 
-            <a href="#" class="menu-item" id="messages-notifications">
-              <i class="uil uil-envelope">
-                <small class="notification-count">6</small>
+            <a href="#" class="menu-item">
+              <i class="uil uil-user-plus">
+                <small class="notification-count">3</small>
               </i>
-              <h3>Messages</h3>
+              <h3>Friend request</h3>
             </a>
+
             <a href="#" class="menu-item">
               <i class="uil uil-bookmark"></i>
               <h3>Bookmarks</h3>
