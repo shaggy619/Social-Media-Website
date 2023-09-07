@@ -5,6 +5,8 @@ const menuItems = document.querySelectorAll(".menu-item");
 const messages = document.querySelector(".messages");
 const messagesNotifications = document.querySelector("#messages-notifications");
 const closeMessageIcon = document.querySelector(".msg-close");
+const message = messages.querySelectorAll(".message");
+const messageSearch = document.querySelector("#message-search");
 //Requests
 const frndRqst = document.querySelector("#requests");
 const request = document.querySelectorAll(".request");
@@ -58,3 +60,18 @@ frndRqst.addEventListener("click", () => {
     }, 4000);
   });
 });
+
+// =========== Message Search ===========
+const searchMessage = () => {
+  const val = messageSearch.value.toLowerCase();
+  message.forEach((user) => {
+    let name = user.querySelector("h5").textContent.toLowerCase();
+    if (name.indexOf(val) != -1) {
+      user.style.display = "flex";
+    } else {
+      user.style.display = "none";
+    }
+  });
+};
+
+messageSearch.addEventListener("keyup", searchMessage);

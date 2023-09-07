@@ -484,6 +484,10 @@ main .container .right {
   margin-bottom: 1rem;
 }
 
+.right .messages .search input[type="search"] {
+  width: 80%;
+}
+
 .right .messages .category {
   display: flex;
   justify-content: space-between;
@@ -531,6 +535,18 @@ main .container .right {
   border: 2px solid white;
   bottom: 0;
   right: 0;
+}
+
+.right .messages .see-more {
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.right .messages .see-more:hover {
+  text-decoration: underline;
 }
 
 .right .messages .msg-icons {
