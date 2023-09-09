@@ -23,14 +23,42 @@ menuItems.forEach((items) => {
     removeActiveClass();
     items.classList.add("active");
     if (items.id != "notifications") {
-      document.querySelector(".notification-popup").style.display = "none";
-    } else {
-      document.querySelector(".notification-popup").style.display = "block";
-      document.querySelector(
-        "#notifications .notification-count"
-      ).style.display = "none";
+      notificationPopup.style.display = "none";
     }
+    // } else {
+    //   document.querySelector(".notification-popup").style.display = "block";
+    //   document.querySelector(
+    //     "#notifications .notification-count"
+    //   ).style.display = "none";
+    // }
   });
+});
+
+// ============= For notifications ===========
+const notificationButton = document.querySelector("#notifications");
+const notificationPopup = document.querySelector(".notification-popup");
+notificationPopup.style.display === "none";
+notificationButton.addEventListener("click", () => {
+  if (
+    notificationPopup.style.display === "none" ||
+    notificationPopup.style.display === ""
+  ) {
+    notificationPopup.style.display = "block";
+  } else {
+    notificationPopup.style.display = "none";
+  }
+  document.querySelector("#notifications .notification-count").style.display =
+    "none";
+});
+
+//Hide Notifications if clicked anywhere outside the notification-popup
+document.addEventListener("click", (event) => {
+  if (
+    !notificationButton.contains(event.target) &&
+    !notificationPopup.contains(event.target)
+  ) {
+    notificationPopup.style.display = "none";
+  }
 });
 
 // =========== Messeges =============
