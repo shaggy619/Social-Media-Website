@@ -7,6 +7,7 @@ const messagesNotifications = document.querySelector("#messages-notifications");
 const closeMessageIcon = document.querySelector(".msg-close");
 const message = messages.querySelectorAll(".message");
 const messageSearch = document.querySelector("#message-search");
+
 //Requests
 const frndRqst = document.querySelector("#requests");
 const request = document.querySelectorAll(".request");
